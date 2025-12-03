@@ -11,6 +11,15 @@ export type SSHCallbacks = {
   onFunction?: (data: string) => void;
 };
 
+// Broadcast stdout to interested listeners (e.g., TailView subscribers)
+const stdoutListeners = new Set<(text: string) => void>();
+export function addStdoutListener(fn: (text: string) => void) {
+  stdoutListeners.add(fn);
+}
+export function removeStdoutListener(fn: (text: string) => void) {
+  stdoutListeners.delete(fn);
+}
+
 const pendingRequests= new Map<string, {
   resolve: (value: any) => void;
   reject: (reason?: any) => void;
@@ -154,6 +163,7 @@ function createRawConnection(url: string, payload: any, callbacks: SSHCallbacks)
         const bytes = new Uint8Array(ev.data);
         const text = new TextDecoder('utf-8').decode(bytes);
         callbacks.onStdout?.(text);
+        try { stdoutListeners.forEach(l => l(text)); } catch {}
         return;
       }
 
@@ -161,11 +171,14 @@ function createRawConnection(url: string, payload: any, callbacks: SSHCallbacks)
         ev.data.arrayBuffer().then(buffer => {
           const text = new TextDecoder('utf-8').decode(new Uint8Array(buffer));
           callbacks.onStdout?.(text);
+          try { stdoutListeners.forEach(l => l(text)); } catch {}
         }).catch(err => callbacks.onError?.(err));
         return;
       }
 
-      callbacks.onStdout?.(String(ev.data));
+      const text = String(ev.data);
+      callbacks.onStdout?.(text);
+      try { stdoutListeners.forEach(l => l(text)); } catch {}
     } catch (err) {
       callbacks.onError?.(err);
     }
@@ -236,6 +249,39 @@ export function fetchExec(command0: string, timeoutMs = 5000) {
       // MyDebug(`Command queued. Queue length: ${execQueue.length}`);
     }
   });
+}
+
+// Streamed exec via interactive shell (supports commands like `tail -f`).
+// Returns a simple controller with `stop()` to send Ctrl-C and `send()`
+// to write arbitrary input to the running command.
+export function fetchStreamExec(command: string) {
+  if (!isSSHConnected() || !activeConn) {
+    throw new Error('SSH connection not established');
+  }
+
+  const enc = new TextEncoder();
+  // Write the command followed by newline into the interactive shell.
+  activeConn.sendBinary(enc.encode(`${command}\n`));
+
+  return {
+    // Send Ctrl-C (ETX, 0x03) to terminate long-running commands like tail -f
+    stop() {
+      try {
+        activeConn?.sendBinary(Uint8Array.from([0x03]));
+      } catch (e) {
+        // noop
+      }
+    },
+    // Send additional input to the running command
+    send(data: string | Uint8Array) {
+      try {
+        const payload = typeof data === 'string' ? enc.encode(data) : data;
+        activeConn?.sendBinary(payload);
+      } catch (e) {
+        // noop
+      }
+    }
+  };
 }
 
 // SFTP request helper using the same pendingRequests mechanism

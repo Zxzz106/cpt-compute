@@ -4,7 +4,7 @@ import { DataGrid, GridColDef, GridRowSelectionModel, GridRowParams } from "@mui
 import { useEffect, useMemo, useState } from "react";
 import { parsePwdFiles } from "@/components/utils/parseExec";
 import MyDebug from "@/components/utils/MyDebug";
-import { fetchExec } from "@/components/utils/sshClient";
+import { fetchExec, fetchStreamExec, addStdoutListener, removeStdoutListener } from "@/components/utils/sshClient";
 import { on } from "events";
 import iconSelect from "@/components/resources/iconSelect";
 import { type SacctJob } from "@/components/utils/parseExec";
@@ -49,6 +49,14 @@ export default function TerminalCard( {job, onClose, onOpenFolder, onScancel}:{j
         checkPathExistence();
     }, [job.workDir]);
 
+    // Auto-follow the bottom when new output arrives
+    useEffect(() => {
+        if (!autoScroll) return;
+        const el = (logRef as any).current as HTMLDivElement | null;
+        if (!el) return;
+        el.scrollTop = el.scrollHeight;
+    }, [stdout, autoScroll]);
+
 
             
 
@@ -82,7 +90,7 @@ export default function TerminalCard( {job, onClose, onOpenFolder, onScancel}:{j
                     </div>
 				</div>
                 
-                <div className="flex flex-col flex-1 min-h-0 overflow-hidden border rounded-lg bg-gray-50">
+                <div className="flex flex-col flex-1 min-h-0 overflow-hidden border rounded-lg bg-gray-50 max-h-[calc(100vh-28rem)]">
                     { job.state.toUpperCase()==="RUNNING" ? (
                         <>
                             {/* Tail -f slurm_job_${job.jobId}.stdout */}
@@ -159,36 +167,44 @@ function TailView({ workDir, jobId, onContent, onTailing, autoScroll }:{
     autoScroll: boolean;
 }) {
     const [timer, setTimer] = useState<number | null>(null);
+    const ctrlRef = useMemo(() => ({ current: null as null | { stop: () => void; send: (d: any) => void } }), []);
+    const [buffer, setBuffer] = useState<string>("");
 
     useEffect(() => {
         let disposed = false;
-        const fetchOnce = async () => {
-            try {
-                const cmd = `cd "${workDir}" && tail -n 50 "slurm_job_${jobId}.stdout" 2>/dev/null || true`;
-                const res = await fetchExec(cmd);
-                if (!disposed) {
-                    onContent(res);
-                }
-            } catch (e) {
-                if (!disposed) onContent("(读取输出失败)");
-            }
-        };
-        // start polling
         onTailing(true);
-        fetchOnce();
-        const id = window.setInterval(fetchOnce, 1000);
-        setTimer(id);
+        setBuffer("");
+        onContent("");
+        try {
+            const cmd = `cd "${workDir}" && tail -f "slurm_job_${jobId}.stdout" 2>/dev/null || true`;
+            const ctrl = fetchStreamExec(cmd);
+            (ctrlRef as any).current = ctrl;
+        } catch (e) {
+            onContent("(启动跟随失败)");
+        }
         return () => {
             disposed = true;
-            if (id) window.clearInterval(id);
+            try { (ctrlRef as any).current?.stop(); } catch {}
             onTailing(false);
         };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [workDir, jobId]);
 
     useEffect(() => {
-        // noop: autoScroll state handled in parent scroll listener
-    }, [autoScroll]);
+        const handler = (text: string) => {
+            setBuffer(prev => {
+                const combined = prev + text;
+                const lines = combined.split(/\r?\n/);
+                const last50 = lines.slice(Math.max(0, lines.length - 50)).join("\n");
+                onContent(last50);
+                return last50;
+            });
+        };
+        addStdoutListener(handler);
+        return () => {
+            removeStdoutListener(handler);
+        };
+    }, [onContent]);
 
     return null;
 }

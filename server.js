@@ -12,6 +12,8 @@ import { handleSftpUpload } from './server/utils/handleSftpUpload.js';
 import { handleSftpDownload } from './server/utils/handleSftpDownload.js';
 
 const dev = process.env.NODE_ENV !== 'production';
+console.log(`dev: ${dev}`);
+console.log(`process.env.NODE_ENV: ${process.env.NODE_ENV}`);
 const PORT = process.env.PORT ? Number(process.env.PORT) : 31801;
 const WS_PATH = process.env.WS_PATH || '/ws';
 

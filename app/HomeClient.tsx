@@ -62,7 +62,7 @@ export default function HomeClient() {
             </div>
         ) }
         <div className="fixed bottom-4 right-4 opacity-50 hover:opacity-100 transition-opacity">
-          <Image src="/public/CPT-logo.png" alt="CPT-Compute Logo" width={64} height={64} />
+          <Image src="/CPT-logo.png" alt="CPT-Compute Logo" width={64} height={64} />
         </div>
     </div>
 
