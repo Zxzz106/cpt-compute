@@ -46,7 +46,7 @@ wss.on('connection', (ws) => {
     let msg;
     try {
       msg = JSON.parse(raw.toString());
-      console.log('Received message:', msg);
+      // console.log('Received message:', msg);
     } catch (err) {
       ws.send(JSON.stringify({ type: 'error', message: 'invalid-json' }));
       return;

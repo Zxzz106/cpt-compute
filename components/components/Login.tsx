@@ -58,9 +58,8 @@ export default function LoginWindow({ show, onClose }: { show: boolean, onClose:
                 e.preventDefault();
                 try {
                   const wsProtocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
-                  const wsHost = window.location.hostname;
-                  const wsPort = 33250;
-                  const url = `${wsProtocol}://${wsHost}:${wsPort}`;
+                  const wsHost = window.location.host;
+                  const url = `${wsProtocol}://${wsHost}/ws`;
 
                   const payload = {
                     type: 'ssh-login',

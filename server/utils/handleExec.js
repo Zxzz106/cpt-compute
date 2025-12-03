@@ -32,7 +32,7 @@ export function handleExec({ ws, msg, sessions }) {
           stderrBuffer += data.toString('utf-8');
         });
         session.execStream = stream;
-        console.log(`Started exec command: \"${msg.data}\" for ID: ${responseID}`);
+        // console.log(`Started exec command: \"${msg.data}\" for ID: ${responseID}`);
       });
     } catch (err) {
       ws.send(JSON.stringify({ type: 'exec-response', id: responseID, stdout: '', stderr: err.message, code: 1 }));
