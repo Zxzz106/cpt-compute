@@ -1,11 +1,12 @@
 {
   "name": "cpt-compute",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 31801",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start -p 31801",
+    "start": "set NODE_ENV=production&& node server.js",
     "lint": "eslint"
   },
   "dependencies": {
@@ -43,7 +44,9 @@
     "react-chartjs-2": "^5.3.1",
     "react-dom": "19.2.0",
     "react-dropzone": "^14.3.8",
-    "uuid": "^13.0.0"
+    "ssh2": "^1.17.0",
+    "uuid": "^13.0.0",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
