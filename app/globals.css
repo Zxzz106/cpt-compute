@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: rgb(22 93 255);
+  --primary-hover: rgb(41 121 255);
+  --primary-active: rgb(12 74 223);
+  --primary-disabled: rgba(156, 163, 175, 0.5);
+  /* 10% opacity variant of primary color */
+  --primary-10: rgba(22, 93, 255, 0.1);
+  --secondary: rgb(54, 207, 201);
+  --secondary-10: rgba(54, 207, 201, 0.1);
+  --success: #52C41A;
+  /* --warning: #FAAD14; */
+  --warning: rgb(250, 173, 20);
+  --warning-10: rgba(250, 173, 20, 0.1);
+
+  /* --danger: #FF4D4F; */
+  --danger: rgb(255, 77, 79);
+  --danger-10: rgba(255, 77, 79, 0.1);
+  --danger-hover: rgb(245, 56, 59);
+  --danger-active: rgb(230, 40, 43);
+  --danger-disabled: rgba(255, 120, 122, 0.5);
+
+  --tertiary: rgb(146, 84, 222);
+  --tertiary-10: rgba(146, 84, 222, 0.1);
+
+  --quaternary: rgb(255, 118, 117);
+  --quaternary-10: rgba(255, 118, 117, 0.1);
+
+  --dark: #1D2129;
+  --gray-light: #F2F3F5;
+  --gray-fine: #EFEFF1;
+  --gray-medium: #C9CDD4;
+  --gray-dark: #86909C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+/* CodeMirror layout: fill parent and scroll long content */
+.cm-editor { height: 100%; }
+.cm-scroller { overflow: auto; }
+
+/* Debug Panel Styles */
+.debug-panel {
+  transition: height 0.3s ease;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+}
+
+
+/* Tailwind-like utility additions adapted from 123.html */
+@layer utilities {
+  .content-auto { content-visibility: auto; }
+  .sidebar-icon {
+    display: flex; align-items: center; justify-content: center;
+    height: 3rem; width: 3rem; margin: 0.5rem 0; padding: 0;
+    background: var(--gray-light); color: var(--primary);
+    border-radius: 0.75rem; box-shadow: 0 6px 18px rgba(0,0,0,0.09);
+    transition: all 0.3s ease; cursor: pointer; position: relative;
+  }
+  /* Added missing text / bg utility classes mapped to CSS variables */
+  .text-primary { color: var(--primary); }
+  .text-success { color: var(--success); }
+  .text-warning { color: var(--warning); }
+  .text-danger { color: var(--danger); }
+  .text-secondary { color: var(--secondary); }
+  .text-tertiary { color: var(--tertiary); }
+  .text-quaternary { color: var(--quaternary); }
+  .text-equal { color: var(--gray-dark); }
+
+  .grayDark { color: var(--gray-dark); }
+  .bg-primary { background-color: var(--primary); }
+  .bg-primary-10 { background-color: var(--primary-10); }
+  .bg-success { background-color: var(--success); }
+  .bg-warning { background-color: var(--warning); }
+  .bg-warning-10 { background-color: var(--warning-10); }
+  .bg-danger { background-color: var(--danger); }
+  .bg-danger-10 { background-color: var(--danger-10); }
+  .bg-tertiary { background-color: var(--tertiary); }
+  .bg-tertiary-10 { background-color: var(--tertiary-10); }
+  .bg-quaternary { background-color: var(--quaternary); }
+  .bg-quaternary-10 { background-color: var(--quaternary-10); }
+
+  .bg-secondary { background-color: var(--secondary); }
+  .bg-secondary-10 { background-color: var(--secondary-10); }
+  .sidebar-icon:hover { background: var(--primary); color: white; border-radius: 1rem; }
+  .sidebar-tooltip {
+    position: absolute; left: 4rem; top: 25%; transform: translateY(-50%);
+    padding: 0.4rem 0.5rem; margin-left: 0.25rem; min-width: max-content;
+    border-radius: 0.375rem; box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    color: #fff; background: var(--dark); font-size: 0.75rem; font-weight: 700;
+    transform-origin: left; transform: scale(0); transition: all 0.12s ease;
+    white-space: nowrap; z-index: 30;
+  }
+  /* Tooltip 基础样式 */
+  .icon-tooltip {
+    position: absolute; 
+    left: -50%; 
+    top: 125%; 
+    transform: translateY(-50%) scale(0); /* 初始隐藏 */
+    padding: 0.4rem 0.5rem; 
+    margin-left: 0.25rem; 
+    min-width: max-content;
+    border-radius: 0.375rem; 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    color: #fff; 
+    background: var(--dark); 
+    font-size: 0.75rem; 
+    font-weight: 700;
+    transform-origin: left; 
+    transition: all 0.12s ease;
+    white-space: nowrap; 
+    z-index: 30;
+    pointer-events: none; /* 避免遮挡点击 */
+    opacity: 0; /* 初始透明，增强隐藏效果 */
+  }
+
+  /* 父容器 hover 时显示 tooltip */
+  .icon-wrapper:hover .icon-tooltip {
+    transform: translateY(-50%) scale(1); /* 显示时缩放为1 */
+    opacity: 1; /* 显示时不透明 */
+  }
+
+  /* 禁用状态下隐藏 tooltip */
+  .icon-wrapper:disabled .icon-tooltip {
+    display: none;
+  }
+
+
+  .group:hover .group-hover\:scale-100 { transform: scale(1); }
+  .card-hover { transition: all 0.3s; }
+  .card-hover:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.08); transform: translateY(-4px); }
+  .btn-primary { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 0.375rem; }
+  .btn-primary:hover { background: var(--primary-hover); transition: all 0.3s;}
+  .btn-primary:active { background: var(--primary-active); }
+  .btn-primary:disabled { background: var(--primary-disabled); transition: all 0.3s;}
+  .btn-secondary { background: white; border: 1px solid var(--gray-medium); color: var(--dark); padding: 0.5rem 1rem; border-radius: 0.375rem; }
+  .btn-secondary:hover { background: var(--gray-light); transition: all 0.3s;}
+  .btn-secondary:active { background: var(--gray-dark); }
+  .btn-secondary:disabled { background: var(--primary-disabled); transition: all 0.3s;}
+
+  .btn-danger { background: var(--danger); color: white; padding: 0.5rem 1rem; border-radius: 0.375rem; }
+  .btn-danger:hover { background: var(--danger-hover); transition: all 0.3s;}
+  .btn-danger:active { background: var(--danger-active); }
+  .btn-danger:disabled { background: var(--primary-disabled); transition: all 0.3s;}
+
+
+  .form-input { width: 100%; padding: 0.5rem; border: 1px solid var(--gray-medium); border-radius: 0.375rem; }
+}
+
+/* App shell layout */
+.app-shell { display: flex; flex-direction: column; min-height: 100vh; }
+.topnav { display: flex; align-items: center; gap: 12px; height: 56px; padding: 0 16px; border-bottom: 1px solid rgba(0,0,0,0.06); background: var(--background); }
+.nav-toggle { font-size: 18px; padding: 6px 10px; background: transparent; border: 1px solid rgba(0,0,0,0.06); border-radius: 6px; }
+.nav-title { font-weight: 600; }
+.nav-actions { margin-left: auto; display: flex; gap: 12px; }
+.notification-badge { position: absolute; top: -4px; right: -6px; background: var(--danger); color: white; font-size: 0.65rem; width: 1rem; height: 1rem; display:flex; align-items:center; justify-content:center; border-radius:999px; }
+
+.shell-body { display: flex; flex: 1 1 auto; }
+.sidebar { width: 64px; min-width: 64px; border-right: 1px solid rgba(0,0,0,0.06); padding: 0.75rem 0.5rem; background: linear-gradient(180deg, rgba(0,0,0,0.01), transparent); transform: translateX(0); transition: transform 200ms ease-in-out; }
+.sidebar .sidebar-header { display:flex; align-items:center; justify-content:space-between; margin-bottom: 8px; }
+.sidebar-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; }
+.sidebar a { color: var(--foreground); text-decoration:none; padding:6px 8px; border-radius:6px; }
+.sidebar a:hover { background: rgba(0,0,0,0.03); }
+.sidebar .close-btn { background: transparent; border: none; font-size: 18px; }
+.sidebar:not(.open) { transform: translateX(-100%); }
+.main-content { flex: 1 1 auto; padding: 20px; }
+
+@media (max-width: 767px) {
+  .sidebar { position: absolute; z-index: 40; height: calc(100vh - 56px); top: 56px; left: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+  .main-content { padding: 12px; }
+}
+
+/* Adjust layout when debug panel is open */
+.app-shell.debug-open .shell-body {
+  margin-bottom: 23.5rem; /* Adjust this value to match the debug panel height */
+}
+
+.app-shell.debug-open .main-content {
+  transition: margin-bottom 0.3s ease;
+}
+
+
+
+.smooth-value {
+  display: inline-block;
+  opacity:0;
+  animation: fadeIn 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation-delay: 0.1s;
+  
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

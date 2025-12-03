@@ -1,0 +1,72 @@
+[
+    {
+        "name": "gaussian",
+        "version": {
+            "g09": {
+                "environment": [
+                    {
+                        "name": "INPUT_FILE",
+                        "description": "输入文件",
+                        "type": "file"
+                    }
+                ],
+                "script": "# Gaussian 09 configuration script\n\nmodule load gaussian09\n\ng09 < ${INPUT_FILE} | tee ${INPUT_FILE%.*}.out"
+            },
+            "g16": {
+                "environment": [
+                    {
+                        "name": "INPUT_FILE",
+                        "description": "输入文件",
+                        "type": "file"
+                    }
+                ],
+                "script": "# Gaussian 16 configuration script\n\nmodule load gaussian16\n\ng16 < ${INPUT_FILE} | tee ${INPUT_FILE%.*}.out"
+            }
+        },
+        "description": "Configuration template for Gaussian 16 computational chemistry software."
+    },
+    {
+        "name": "fluent",
+        "version": {
+            "2022R1": {
+                "environment": [
+                    {
+                        "name": "FLUENT_SOLVER",
+                        "description": "求解器类型",
+                        "type": "select",
+                        "options": [
+                            "2d",
+                            "3d",
+                            "2ddp",
+                            "3ddp"
+                        ]
+                    },
+                    {
+                        "name": "JOURNAL_FILE",
+                        "description": "jou 文件",
+                        "type": "file"
+                    }
+                ],
+                "script": "# Fluent 22R1 configuration script\n\nmodule load fluent2201\n\nexport FLUENT_AFFINITY=0\nexport SLURM_ENABLED=1\nFL_SCHEDULER_HOST_FILE=slurm.${SLURM_JOB_ID}.hosts\n/bin/rm -rf ${FL_SCHEDULER_HOST_FILE}\nscontrol show hostnames \"$SLURM_JOB_NODELIST\" >> $FL_SCHEDULER_HOST_FILE\nexport SCHEDULER_TIGHT_COUPLING=1\n\nfluent ${FLUENT_SOLVER} -g -t$SLURM_NTASKS -i ${JOURNAL_FILE} -mpi=intel -cnf=${FL_SCHEDULER_HOST_FILE}\n"
+            }
+        },
+        "description": "Configuration template for Ansys Fluent simulations."
+    },
+    {
+        "name": "matlab",
+        "version": {
+            "2024a": {
+                "environment": [
+                    {
+                        "name": "INPUT_FILE",
+                        "description": "输入文件",
+                        "type": "file"
+                    }
+                ],
+                "script": "# MATLAB 2024a configuration script\n\nmodule load matlab/2024a\n\nmatlab -nodisplay -nosplash -r $(basename ${INPUT_FILE} .m)"
+            }
+            
+        },
+        "description": "Configuration template for MATLAB software."
+    }
+]
