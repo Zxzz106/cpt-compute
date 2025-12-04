@@ -114,10 +114,10 @@ export default function TerminalCard( {job, onClose, onOpenFolder, onScancel}:{j
                             <div className="flex-1 overflow-auto p-3" ref={(el)=>{(logRef as any).current = el}} onScroll={(e)=>{
                                 const el = (logRef as any).current as HTMLDivElement | null;
                                 if (!el) return;
-                                const nearBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 20;
-                                if (!nearBottom && autoScroll) {
-                                    setAutoScroll(false);
-                                }
+                                // const nearBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 20;
+                                // if (!nearBottom && autoScroll) {
+                                //     setAutoScroll(false);
+                                // }
                             }}>
                                 <pre className="text-xs whitespace-pre-wrap break-words leading-5 font-mono text-gray-800">
                                     {stdout || "(无输出)"}

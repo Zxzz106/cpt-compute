@@ -149,7 +149,8 @@ export default function EditJob({ env, script, lastPayload }: { env: EnvVar[]; s
 
     // Resolve remote absolute workDir (expand ~ to $HOME)
     const home = (await fetchExec("echo -n $HOME")).trim();
-    let absWorkDir = workDirRaw.replace(/^~(?=\/?|$)/, home);
+    let absWorkDir = workDirRaw.replace(/^(?:~|\/?\$HOME)(?=\/?|$)/, home);
+
     if (!absWorkDir) absWorkDir = home;
 
     // Ensure directory exists
@@ -178,6 +179,10 @@ export default function EditJob({ env, script, lastPayload }: { env: EnvVar[]; s
       "",
       String(payload.script || "").trim()
     ].join("\n");
+
+    MyDebug(`Submitting job with script: \n${sbatch}`);
+    MyDebug(`Uploading to remote path: ${joinPath(absWorkDir, jobBase + ".sh")}`);
+
 
     const scriptPath = `${absWorkDir.replace(/\/$/, "")}/${jobBase}.sh`;
     const dataB64 = toBase64Utf8(sbatch);
