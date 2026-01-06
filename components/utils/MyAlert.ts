@@ -1,4 +1,4 @@
-export default function MyAlert(message: string, duration = 300) {
+export default function MyAlert(message: string, duration = 800) {
   if (typeof document === 'undefined') return;
 
   const container = document.createElement('div');

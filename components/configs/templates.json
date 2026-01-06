@@ -2,16 +2,6 @@
     {
         "name": "gaussian",
         "version": {
-            "g09": {
-                "environment": [
-                    {
-                        "name": "INPUT_FILE",
-                        "description": "输入文件",
-                        "type": "file"
-                    }
-                ],
-                "script": "# Gaussian 09 configuration script\n\nmodule load gaussian09\n\ng09 < ${INPUT_FILE} | tee ${INPUT_FILE%.*}.out"
-            },
             "g16": {
                 "environment": [
                     {
