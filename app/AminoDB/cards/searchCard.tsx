@@ -3,18 +3,22 @@
 import datalist from "@/components/configs/aminodb.json";
 import { useEffect, useRef, useState, type ChangeEvent } from "react";
 
+type ConditionDetail = {
+	condition: string | null;
+	reac_heat: number | null;
+	eq_solubility: number | null;
+	peak_time: number | null;
+	data_source: string | null;
+	condition_id: number;
+};
+
 type AminoRecord = {
-	index: number;
-	combined_index: string;
+	item_id: number;
 	category: string;
 	name: string;
 	cas: string;
 	abbr: string;
-	conditions: string;
-	reac_heat: number | string;
-	eq_solubility: string | number;
-	peak_time: string | number;
-	data_source: string;
+	conditions_details: ConditionDetail[];
 };
 
 export default function SearchCard() {
@@ -41,15 +45,15 @@ export default function SearchCard() {
 	const matchKeywords = (item: AminoRecord, input: string) => {
 		const trimmed = input.trim().toLowerCase();
 		if (!trimmed) return false;
-		for (const key of [
-			"category",
-			"name",
-			"cas",
-			"abbr",
+		for (const value of [
+			item.category,
+			item.name,
+			item.cas,
+			item.abbr,
 		]) {
-			const value = String(item[key as keyof AminoRecord] ?? "").toLowerCase();
-			if (!value) continue;
-			if (sequenceMatch(trimmed, value)) return true;
+			const normalized = String(value ?? "").toLowerCase();
+			if (!normalized) continue;
+			if (sequenceMatch(trimmed, normalized)) return true;
 		}
 		return false;
 	};
@@ -71,11 +75,12 @@ export default function SearchCard() {
 
 	const handleItemClick = (item: AminoRecord) => {
 		setSelectedItem(item);
-		setInputValue(item.combined_index);
+		setInputValue(['category','name','cas','abbr'].map(k=>item[k as keyof AminoRecord]).map(v=>v||"N/A").join(" | "));
 		setShowDropdown(false);
 		setHistory((prev) => {
-			const withoutDup = prev.filter((row) => row.index !== item.index);
-			return [item, ...withoutDup].slice(0, 6);
+			const exists = prev.find((row) => row.item_id === item.item_id);
+			if (exists) return prev; // preserve existing order when re-querying from history
+			return [item, ...prev].slice(0, 6);
 		});
 	};
 
@@ -90,7 +95,12 @@ export default function SearchCard() {
 			const saved = localStorage.getItem(HISTORY_KEY);
 			if (saved) {
 				const parsed = JSON.parse(saved);
-				if (Array.isArray(parsed)) setHistory(parsed.slice(0, 6));
+				if (Array.isArray(parsed)) {
+					const cleaned = parsed
+						.filter((item) => item && typeof item.item_id === "number" && item.base_info)
+						.slice(0, 6);
+					setHistory(cleaned);
+				}
 			}
 		} catch (err) {
 			console.error("Failed to load history", err);
@@ -103,7 +113,10 @@ export default function SearchCard() {
 				localStorage.removeItem(HISTORY_KEY);
 				return;
 			}
-			localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+			localStorage.setItem(
+				HISTORY_KEY,
+				JSON.stringify(history.slice(0, 6)),
+			);
 		} catch (err) {
 			console.error("Failed to save history", err);
 		}
@@ -155,21 +168,21 @@ export default function SearchCard() {
 							role="listbox"
 						>
 							{matchedList.map((item) => (
-								<li key={item.index} className="m-0 p-0 border-b border-gray-100 last:border-0">
+								<li key={item.item_id} className="m-0 p-0 border-b border-gray-100 last:border-0">
 									<button
 										className="block w-full px-4 py-3 text-base transition-colors whitespace-normal hover:bg-blue-500 hover:text-white text-left"
 										role="option"
 										onClick={(e) => {
 										e.preventDefault();
 										handleItemClick(item);
-										}}
+									}}
 									>
 									<div className="flex flex-col gap-1">
 										<div className="font-semibold text-slate-800 leading-snug break-words">
-											{item.combined_index}
+											{['category','name','cas','abbr'].map(k=>item[k as keyof AminoRecord]).map(v=>v||"N/A").join(" | ")}
 										</div>
 										<div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
-											<span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">ID {item.index}</span>
+											<span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">ID {item.item_id}</span>
 											{item.abbr && <span className="px-2 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100">{item.abbr}</span>}
 											{item.category && <span className="px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">{item.category}</span>}
 										</div>
@@ -188,49 +201,67 @@ export default function SearchCard() {
 									<div className="flex flex-wrap gap-2 text-xs">
 										{selectedItem.category && <span className="px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">{selectedItem.category}</span>}
 										{selectedItem.abbr && <span className="px-2 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100">{selectedItem.abbr}</span>}
-										<span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">ID {selectedItem.index}</span>
+										<span className="px-2 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">ID {selectedItem.item_id}</span>
 									</div>
 								</div>
 								<div className="grid grid-cols-1 gap-3 text-base leading-7 text-slate-700">
 									<p><strong>名称:</strong> {selectedItem.name}</p>
 									<p><strong>CAS:</strong> {selectedItem.cas}</p>
 									<p><strong>缩写:</strong> {selectedItem.abbr || "-"}</p>
-									<p><strong>反应条件:</strong> {selectedItem.conditions || "-"}</p>
-									<p><strong>反应热(kJ/mol):</strong> {selectedItem.reac_heat || "-"}</p>
-									<p><strong>平衡溶解度(mol/mol):</strong> {selectedItem.eq_solubility || "-"}</p>
-									<p><strong>峰值时间(min):</strong> {selectedItem.peak_time || "-"}</p>
-									<p><strong>数据来源:</strong> {selectedItem.data_source || "-"}</p>
+									<p><strong>类别:</strong> {selectedItem.category || "-"}</p>
+								</div>
+								<div className="mt-4 space-y-3">
+									<div className="flex items-center justify-between">
+										<h5 className="text-sm font-semibold text-slate-700">实验条件</h5>
+										<span className="text-xs text-slate-500">{selectedItem.conditions_details.length || 0} 条</span>
+									</div>
+									{selectedItem.conditions_details.length === 0 ? (
+										<div className="rounded-lg border border-dashed border-slate-200 bg-white/70 p-3 text-sm text-slate-500">暂无条件数据</div>
+									) : (
+										<div className="space-y-2">
+											{selectedItem.conditions_details.map((detail) => (
+												<div key={detail.condition_id} className="rounded-lg border border-slate-200 bg-white/90 p-3 text-sm text-slate-700 shadow-sm">
+													<div className="font-semibold text-slate-800">{detail.condition || "-"}</div>
+													<div className="mt-2 grid grid-cols-2 gap-2 text-xs text-slate-600">
+														<span>反应热(kJ/mol): {detail.reac_heat ?? "-"}</span>
+														<span>平衡溶解度(mol/mol): {detail.eq_solubility ?? "-"}</span>
+														<span>峰值时间(min): {detail.peak_time ?? "-"}</span>
+														<span>数据来源: {detail.data_source ?? "-"}</span>
+													</div>
+												</div>
+											))}
+										</div>
+									)}
 								</div>
 							</div>
 						)}
 				</div>
 
 				<div className="flex flex-col gap-3">
-					{/* <div className="flex items-center justify-between">
+					<div className="flex items-center justify-between">
 						<h4 className="text-lg font-semibold text-slate-800">历史查询</h4>
-						<span className="text-xs text-slate-500">最新最多保留 6 条</span>
-					</div> */}
+					</div>
 					{history.length === 0 ? (
 						<div className="w-full rounded-lg border border-dashed border-slate-200 bg-white/70 p-4 text-center text-slate-500 text-sm">暂无历史记录，选择一条结果后会出现在这里</div>
 					) : (
 						<div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-							{history.map((item) => (
+							{history.map((item, idx) => (
 								<button
-									key={item.index}
+									key={item.item_id ?? idx}
 									onClick={() => handleItemClick(item)}
 									className="group w-full rounded-lg border border-slate-200 bg-white/80 p-4 text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
 								>
 									<div className="flex items-start justify-between gap-2">
 										<div className="font-semibold text-slate-800 group-hover:text-blue-600 leading-snug line-clamp-2">
-											{item.name || item.combined_index}
+											{item.name || item.cas || item.abbr || "N/A"}
 										</div>
-										<span className="text-xs text-slate-500">ID {item.index}</span>
+										<span className="text-xs text-slate-500">ID {item.item_id}</span>
 									</div>
 									<div className="mt-2 flex flex-wrap gap-2 text-xs">
 										{item.abbr && <span className="px-2 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100">{item.abbr}</span>}
 										{item.category && <span className="px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">{item.category}</span>}
 									</div>
-									<p className="mt-2 text-xs text-slate-500 line-clamp-2">条件: {item.conditions || "-"}</p>
+									<p className="mt-2 text-xs text-slate-500 line-clamp-2">CAS: {item.cas || "-"}</p>
 								</button>
 							))}
 						</div>

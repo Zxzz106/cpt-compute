@@ -1,808 +1,984 @@
 [
     {
-        "index": 1,
-        "combined_index": "伯胺 | 乙醇胺 | 141-43-5 | MEA",
-        "category": "伯胺",
-        "name": "乙醇胺",
-        "cas": "141-43-5",
-        "abbr": "MEA",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 84.67,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 2,
-        "combined_index": "伯胺 | 乙醇胺 | 141-43-5 | MEA",
-        "category": "伯胺",
-        "name": "乙醇胺",
-        "cas": "141-43-5",
-        "abbr": "MEA",
-        "conditions": "30%CO2，2mol/L，313K",
-        "reac_heat": 85.12,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 3,
-        "combined_index": "伯胺 | 乙醇胺 | 141-43-5 | MEA",
-        "category": "伯胺",
-        "name": "乙醇胺",
-        "cas": "141-43-5",
-        "abbr": "MEA",
-        "conditions": "50%CO2，2mol/L，313K",
-        "reac_heat": 86.36,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 4,
-        "combined_index": "伯胺 | 乙醇胺 | 141-43-5 | MEA",
-        "category": "伯胺",
-        "name": "乙醇胺",
-        "cas": "141-43-5",
-        "abbr": "MEA",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 88.22,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 5,
-        "combined_index": "伯胺 | 2-氨基-1,3-丙二醇 | 534-03-2 | N/A",
-        "category": "伯胺",
-        "name": "2-氨基-1,3-丙二醇",
-        "cas": "534-03-2",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 98.39,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 6,
-        "combined_index": "伯胺 | 正丁胺 | 109-73-9 | n-BA",
-        "category": "伯胺",
-        "name": "正丁胺",
-        "cas": "109-73-9",
-        "abbr": "n-BA",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 96.73,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 7,
-        "combined_index": "伯胺 | 异丁胺 | 78-81-9 | IBA",
-        "category": "伯胺",
-        "name": "异丁胺",
-        "cas": "78-81-9",
-        "abbr": "IBA",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 111.59,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 8,
-        "combined_index": "伯胺 | 5-氨基-1-戊醇 | 2508-29-4 | 5-APO",
-        "category": "伯胺",
-        "name": "5-氨基-1-戊醇",
-        "cas": "2508-29-4",
-        "abbr": "5-APO",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 100.1,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 9,
-        "combined_index": "伯胺 | DL-2-氨基丁醇 | 13054-87-0 | N/A",
-        "category": "伯胺",
-        "name": "DL-2-氨基丁醇",
-        "cas": " 13054-87-0",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 104.77,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 10,
-        "combined_index": "伯胺 | 二甘醇胺 | 929-06-6 | DGA",
-        "category": "伯胺",
-        "name": "二甘醇胺",
-        "cas": "929-06-6",
-        "abbr": "DGA",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 90.02,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 11,
-        "combined_index": "伯胺 | 环戊胺 | 1003-03-8 | CPA",
-        "category": "伯胺",
-        "name": "环戊胺",
-        "cas": "1003-03-8",
-        "abbr": "CPA",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 80.37,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 12,
-        "combined_index": "伯胺 | 环丙胺 | 765-30-0 | CPA",
-        "category": "伯胺",
-        "name": "环丙胺",
-        "cas": " 765-30-0",
-        "abbr": "CPA",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 135.93,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 13,
-        "combined_index": "伯胺 | 4-氨基-1-丁醇 | 13325-10-5 | N/A",
-        "category": "伯胺",
-        "name": "4-氨基-1-丁醇",
-        "cas": "13325-10-5",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 83.74,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 14,
-        "combined_index": "伯胺 | 正戊胺 | 110-58-7 | N/A",
-        "category": "伯胺",
-        "name": "正戊胺",
-        "cas": "110-58-7",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 83.8,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 15,
-        "combined_index": "仲胺 | 二乙胺 | 109-89-7 | N/A",
-        "category": "仲胺",
-        "name": "二乙胺",
-        "cas": "109-89-7",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 57.99,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": "Separation and Purification Technology 352 (2025) 128016"
-    },
-    {
-        "index": 16,
-        "combined_index": "仲胺 | 2-甲氨基乙醇 | 109-83-1 | N/A",
-        "category": "仲胺",
-        "name": "2-甲氨基乙醇",
-        "cas": "109-83-1",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 68.37,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 17,
-        "combined_index": "仲胺 | 2-甲氨基乙醇 | 109-83-1 | N/A",
-        "category": "仲胺",
-        "name": "2-甲氨基乙醇",
-        "cas": "109-83-1",
-        "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 78.89,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 18,
-        "combined_index": "仲胺 | 2-乙氨基乙醇 | 110-73-6 | N/A",
-        "category": "仲胺",
-        "name": "2-乙氨基乙醇",
-        "cas": "110-73-6",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 72.53,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 19,
-        "combined_index": "仲胺 | 2-丙氨基乙醇 | 16369-21-4 | N/A",
-        "category": "仲胺",
-        "name": "2-丙氨基乙醇",
-        "cas": "16369-21-4",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 74.09,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 20,
-        "combined_index": "仲胺 | 2-丁氨基乙醇 | 111-75-1 | N/A",
         "category": "仲胺",
         "name": "2-丁氨基乙醇",
         "cas": "111-75-1",
         "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 79.73,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 79.73,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 1
     },
     {
-        "index": 21,
-        "combined_index": "仲胺 | 2-异丙氨基乙醇 | 109-56-8 | N/A",
+        "category": "仲胺",
+        "name": "2-丙氨基乙醇",
+        "cas": "16369-21-4",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 74.09,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 2
+    },
+    {
+        "category": "仲胺",
+        "name": "2-乙氨基乙醇",
+        "cas": "110-73-6",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 72.53,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 3
+    },
+    {
         "category": "仲胺",
         "name": "2-异丙氨基乙醇",
         "cas": "109-56-8",
         "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 64.88,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 64.88,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 4
     },
     {
-        "index": 22,
-        "combined_index": "仲胺 | N-乙基异丙基胺 | 19961-27-4 | N/A",
+        "category": "仲胺",
+        "name": "2-甲氨基乙醇",
+        "cas": "109-83-1",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 68.37,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            },
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 78.89,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 2
+            }
+        ],
+        "item_id": 5
+    },
+    {
         "category": "仲胺",
         "name": "N-乙基异丙基胺",
         "cas": "19961-27-4",
         "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 51.19,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 51.19,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 6
     },
     {
-        "index": 23,
-        "combined_index": "叔胺 | N-甲基二乙醇胺 | 105-59-9 | N/A",
-        "category": "叔胺",
-        "name": "N-甲基二乙醇胺",
-        "cas": "105-59-9",
+        "category": "仲胺",
+        "name": "二乙胺",
+        "cas": "109-89-7",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 58.04,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 57.99,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": "Separation and Purification Technology 352 (2025) 128016",
+                "condition_id": 1
+            }
+        ],
+        "item_id": 7
     },
     {
-        "index": 24,
-        "combined_index": "叔胺 | N，N-二甲基乙醇胺 | 108-01-0 | N/A",
-        "category": "叔胺",
-        "name": "N，N-二甲基乙醇胺",
-        "cas": "108-01-0",
+        "category": "伯胺",
+        "name": "2-氨基-1,3-丙二醇",
+        "cas": "534-03-2",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 60.49,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 98.39,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 8
     },
     {
-        "index": 25,
-        "combined_index": "叔胺 | 3-二甲氨基-1-丙醇 | 3179-63-3 | N/A",
-        "category": "叔胺",
-        "name": "3-二甲氨基-1-丙醇",
-        "cas": "3179-63-3",
+        "category": "伯胺",
+        "name": "4-氨基-1-丁醇",
+        "cas": "13325-10-5",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 61.56,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 83.74,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 9
     },
     {
-        "index": 26,
-        "combined_index": "叔胺 | 3-二乙氨基-1-丙醇 | 622-93-5 | N/A",
-        "category": "叔胺",
-        "name": "3-二乙氨基-1-丙醇",
-        "cas": "622-93-5",
+        "category": "伯胺",
+        "name": "5-氨基-1-戊醇",
+        "cas": "2508-29-4",
+        "abbr": "5-APO",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 100.1,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 10
+    },
+    {
+        "category": "伯胺",
+        "name": "DL-2-氨基丁醇",
+        "cas": " 13054-87-0",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 65.47,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 104.77,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 11
     },
     {
-        "index": 27,
-        "combined_index": "叔胺 | N，N-二甲基异丙醇胺 | 108-16-7 | N/A",
-        "category": "叔胺",
-        "name": "N，N-二甲基异丙醇胺",
-        "cas": "108-16-7",
+        "category": "伯胺",
+        "name": "乙醇胺",
+        "cas": "141-43-5",
+        "abbr": "MEA",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 84.67,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            },
+            {
+                "condition": "30%CO2，2mol/L，313K",
+                "reac_heat": 85.12,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 2
+            },
+            {
+                "condition": "50%CO2，2mol/L，313K",
+                "reac_heat": 86.36,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 3
+            },
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 88.22,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 4
+            }
+        ],
+        "item_id": 12
+    },
+    {
+        "category": "伯胺",
+        "name": "二甘醇胺",
+        "cas": "929-06-6",
+        "abbr": "DGA",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 90.02,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 13
+    },
+    {
+        "category": "伯胺",
+        "name": "异丁胺",
+        "cas": "78-81-9",
+        "abbr": "IBA",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 111.59,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 14
+    },
+    {
+        "category": "伯胺",
+        "name": "正丁胺",
+        "cas": "109-73-9",
+        "abbr": "n-BA",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 96.73,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 15
+    },
+    {
+        "category": "伯胺",
+        "name": "正戊胺",
+        "cas": "110-58-7",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 64.77,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 83.8,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 16
     },
     {
-        "index": 28,
-        "combined_index": "叔胺 | 1-二乙胺基-2-丙醇 | 4402-32-8 | N/A",
+        "category": "伯胺",
+        "name": "环丙胺",
+        "cas": " 765-30-0",
+        "abbr": "CPA",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 135.93,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 17
+    },
+    {
+        "category": "伯胺",
+        "name": "环戊胺",
+        "cas": "1003-03-8",
+        "abbr": "CPA",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 80.37,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 18
+    },
+    {
         "category": "叔胺",
         "name": "1-二乙胺基-2-丙醇",
         "cas": "4402-32-8",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 74.5,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 74.5,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 19
     },
     {
-        "index": 29,
-        "combined_index": "叔胺 | 二乙氨基乙醇 | 100-37-8 | N/A",
         "category": "叔胺",
-        "name": "二乙氨基乙醇",
-        "cas": "100-37-8",
+        "name": "3-二乙氨基-1-丙醇",
+        "cas": "622-93-5",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 67.89,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 65.47,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 20
     },
     {
-        "index": 30,
-        "combined_index": "叔胺 | 3-二乙胺基-1,2-丙二醇 | 621-56-7 | N/A",
         "category": "叔胺",
         "name": "3-二乙胺基-1,2-丙二醇",
         "cas": "621-56-7",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 70.28,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 70.28,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 21
     },
     {
-        "index": 31,
-        "combined_index": "叔胺 | 三乙醇胺 | 102-71-6 | N/A",
+        "category": "叔胺",
+        "name": "3-二甲氨基-1-丙醇",
+        "cas": "3179-63-3",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 61.56,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 22
+    },
+    {
+        "category": "叔胺",
+        "name": "N-甲基二乙醇胺",
+        "cas": "105-59-9",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 58.04,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 23
+    },
+    {
+        "category": "叔胺",
+        "name": "N，N-二甲基乙醇胺",
+        "cas": "108-01-0",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 60.49,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 24
+    },
+    {
+        "category": "叔胺",
+        "name": "N，N-二甲基异丙醇胺",
+        "cas": "108-16-7",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 64.77,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 25
+    },
+    {
         "category": "叔胺",
         "name": "三乙醇胺",
         "cas": "102-71-6",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 54.04,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 54.04,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 26
     },
     {
-        "index": 32,
-        "combined_index": "多胺 | 哌嗪 | 110-85-0 | N/A",
-        "category": "多胺",
-        "name": "哌嗪",
-        "cas": "110-85-0",
+        "category": "叔胺",
+        "name": "二乙氨基乙醇",
+        "cas": "100-37-8",
         "abbr": "",
-        "conditions": "15%CO2，0.5mol/L，313K",
-        "reac_heat": 70.68,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 67.89,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 27
     },
     {
-        "index": 33,
-        "combined_index": "多胺 | 哌嗪 | 110-85-0 | N/A",
-        "category": "多胺",
-        "name": "哌嗪",
-        "cas": "110-85-0",
-        "abbr": "",
-        "conditions": "50%CO2，1.4mol/L，313K",
-        "reac_heat": 74.41,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 34,
-        "combined_index": "多胺 | 2-甲基哌嗪 | 109-07-9 | N/A",
-        "category": "多胺",
-        "name": "2-甲基哌嗪",
-        "cas": "109-07-9",
-        "abbr": "",
-        "conditions": "15%CO2，0.5mol/L，313K",
-        "reac_heat": 71.39,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 35,
-        "combined_index": "多胺 | 2-甲基哌嗪 | 109-07-9 | N/A",
-        "category": "多胺",
-        "name": "2-甲基哌嗪",
-        "cas": "109-07-9",
-        "abbr": "",
-        "conditions": "50%CO2，2mol/L，313K",
-        "reac_heat": 77.08,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 36,
-        "combined_index": "多胺 | 2,6-二甲基哌嗪 | 108-49-6 | N/A",
-        "category": "多胺",
-        "name": "2,6-二甲基哌嗪",
-        "cas": "108-49-6",
-        "abbr": "",
-        "conditions": "15%CO2，0.5mol/L，313K",
-        "reac_heat": 74.18,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 37,
-        "combined_index": "多胺 | N-甲基哌嗪 | 109-01-3 | N/A",
-        "category": "多胺",
-        "name": "N-甲基哌嗪",
-        "cas": "109-01-3",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 65.57,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 38,
-        "combined_index": "多胺 | 1-乙基哌嗪 | 5308-25-8 | N/A",
-        "category": "多胺",
-        "name": "1-乙基哌嗪",
-        "cas": "5308-25-8",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 67.56,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 39,
-        "combined_index": "多胺 | N-羟乙基哌嗪 | 103-76-4 | N/A",
-        "category": "多胺",
-        "name": "N-羟乙基哌嗪",
-        "cas": "103-76-4",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 66.65,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 40,
-        "combined_index": "多胺 | 1,4-二甲基哌嗪 | 106-58-1 | N/A",
-        "category": "多胺",
-        "name": "1,4-二甲基哌嗪",
-        "cas": "106-58-1",
-        "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 52.13,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 41,
-        "combined_index": "多胺 | 三乙烯二胺 | 280-57-9 | N/A",
-        "category": "多胺",
-        "name": "三乙烯二胺",
-        "cas": "280-57-9",
-        "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 48.99,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 42,
-        "combined_index": "多胺 | 1,4-双(2-羟乙基)哌嗪 | 122-96-3 | N/A",
-        "category": "多胺",
-        "name": "1,4-双(2-羟乙基)哌嗪",
-        "cas": "122-96-3",
-        "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 42.91,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 43,
-        "combined_index": "多胺 | 乙二胺 | 107-15-3 | N/A",
-        "category": "多胺",
-        "name": "乙二胺",
-        "cas": "107-15-3",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 90.27,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 44,
-        "combined_index": "多胺 | 1,3-丙二胺 | 109-76-2 | N/A",
         "category": "多胺",
         "name": "1,3-丙二胺",
         "cas": "109-76-2",
         "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 92.53,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 92.53,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 28
     },
     {
-        "index": 45,
-        "combined_index": "多胺 | N-甲基乙二胺 | 109-81-9 | N/A",
         "category": "多胺",
-        "name": "N-甲基乙二胺",
-        "cas": "109-81-9",
+        "name": "1,4-二甲基哌嗪",
+        "cas": "106-58-1",
         "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 86.28,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 52.13,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 29
     },
     {
-        "index": 46,
-        "combined_index": "多胺 | 3-甲氨基丙胺 | 6291-84-5 | N/A",
         "category": "多胺",
-        "name": "3-甲氨基丙胺",
-        "cas": "6291-84-5",
+        "name": "1,4-双(2-羟乙基)哌嗪",
+        "cas": "122-96-3",
         "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 87.68,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 42.91,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 30
     },
     {
-        "index": 47,
-        "combined_index": "多胺 | 3-甲氨基丙胺 | 6291-84-5 | N/A",
         "category": "多胺",
-        "name": "3-甲氨基丙胺",
-        "cas": "6291-84-5",
+        "name": "1-乙基哌嗪",
+        "cas": "5308-25-8",
         "abbr": "",
-        "conditions": "50%CO2，2mol/L，313K",
-        "reac_heat": 90.91,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 67.56,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 31
     },
     {
-        "index": 48,
-        "combined_index": "多胺 | N,N-二甲基乙二胺 | 108-00-9 | N/A",
         "category": "多胺",
-        "name": "N,N-二甲基乙二胺",
-        "cas": "108-00-9",
+        "name": "2,6-二甲基哌嗪",
+        "cas": "108-49-6",
         "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 78.97,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，0.5mol/L，313K",
+                "reac_heat": 74.18,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 32
     },
     {
-        "index": 49,
-        "combined_index": "多胺 | 3-二甲氨基丙胺 | 109-55-7 | N/A",
+        "category": "多胺",
+        "name": "2-甲基哌嗪",
+        "cas": "109-07-9",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，0.5mol/L，313K",
+                "reac_heat": 71.39,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            },
+            {
+                "condition": "50%CO2，2mol/L，313K",
+                "reac_heat": 77.08,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 2
+            }
+        ],
+        "item_id": 33
+    },
+    {
         "category": "多胺",
         "name": "3-二甲氨基丙胺",
         "cas": "109-55-7",
         "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 80.16,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 80.16,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 34
     },
     {
-        "index": 50,
-        "combined_index": "多胺 | N-乙基乙二胺 | 110-72-5 | N/A",
-        "category": "多胺",
-        "name": "N-乙基乙二胺",
-        "cas": "110-72-5",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 87.88,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 51,
-        "combined_index": "多胺 | N,N-二乙基乙二胺 | 100-36-7 | N/A",
-        "category": "多胺",
-        "name": "N,N-二乙基乙二胺",
-        "cas": "100-36-7",
-        "abbr": "",
-        "conditions": "15%CO2，2mol/L，313K",
-        "reac_heat": 84.8,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 52,
-        "combined_index": "多胺 | 己二胺 | 124-09-4 | N/A",
-        "category": "多胺",
-        "name": "己二胺",
-        "cas": "124-09-4",
-        "abbr": "",
-        "conditions": "50%CO2，2mol/L，313K",
-        "reac_heat": 92.22,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 53,
-        "combined_index": "多胺 | 3-甲氨基丙胺 | 6291-84-5 | N/A",
         "category": "多胺",
         "name": "3-甲氨基丙胺",
         "cas": "6291-84-5",
         "abbr": "",
-        "conditions": "50%CO2，2mol/L，313K",
-        "reac_heat": 90.91,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 87.68,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            },
+            {
+                "condition": "50%CO2，2mol/L，313K",
+                "reac_heat": 90.91,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 2
+            },
+            {
+                "condition": "50%CO2，2mol/L，313K",
+                "reac_heat": 90.91,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 3
+            }
+        ],
+        "item_id": 35
     },
     {
-        "index": 54,
-        "combined_index": "多胺 | 羟乙基乙二胺 | 111-41-1 | N/A",
         "category": "多胺",
-        "name": "羟乙基乙二胺",
-        "cas": "111-41-1",
+        "name": "N,N-二乙基乙二胺",
+        "cas": "100-36-7",
         "abbr": "",
-        "conditions": "50%CO2，2mol/L，313K",
-        "reac_heat": 87.62,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 84.8,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 36
     },
     {
-        "index": 55,
-        "combined_index": "多胺 | 四乙烯五胺 | 112-57-2 | N/A",
         "category": "多胺",
-        "name": "四乙烯五胺",
-        "cas": "112-57-2",
+        "name": "N,N-二甲基乙二胺",
+        "cas": "108-00-9",
         "abbr": "",
-        "conditions": "50%CO2，1mol/L，313K",
-        "reac_heat": 82.95,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 78.97,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 37
     },
     {
-        "index": 56,
-        "combined_index": "多胺 | N-氨乙基哌嗪 | 140-31-8 | N/A",
+        "category": "多胺",
+        "name": "N-乙基乙二胺",
+        "cas": "110-72-5",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 87.88,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 38
+    },
+    {
         "category": "多胺",
         "name": "N-氨乙基哌嗪",
         "cas": "140-31-8",
         "abbr": "",
-        "conditions": "50%CO2，2mol/L，313K",
-        "reac_heat": 82.36,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "50%CO2，2mol/L，313K",
+                "reac_heat": 82.36,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 39
     },
     {
-        "index": 57,
-        "combined_index": "氨基酸盐 | 甘氨酸钾 | N/A | N/A",
-        "category": "氨基酸盐",
-        "name": "甘氨酸钾",
-        "cas": "",
+        "category": "多胺",
+        "name": "N-甲基乙二胺",
+        "cas": "109-81-9",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 85.05,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 86.28,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 40
     },
     {
-        "index": 58,
-        "combined_index": "氨基酸盐 | 肌氨酸钾 | N/A | N/A",
-        "category": "氨基酸盐",
-        "name": "肌氨酸钾",
-        "cas": "",
+        "category": "多胺",
+        "name": "N-甲基哌嗪",
+        "cas": "109-01-3",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 75.79,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 65.57,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 41
     },
     {
-        "index": 59,
-        "combined_index": "氨基酸盐 | L-脯氨酸钾 | N/A | N/A",
+        "category": "多胺",
+        "name": "N-羟乙基哌嗪",
+        "cas": "103-76-4",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 66.65,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 42
+    },
+    {
+        "category": "多胺",
+        "name": "三乙烯二胺",
+        "cas": "280-57-9",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 48.99,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 43
+    },
+    {
+        "category": "多胺",
+        "name": "乙二胺",
+        "cas": "107-15-3",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，2mol/L，313K",
+                "reac_heat": 90.27,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 44
+    },
+    {
+        "category": "多胺",
+        "name": "哌嗪",
+        "cas": "110-85-0",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "15%CO2，0.5mol/L，313K",
+                "reac_heat": 70.68,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            },
+            {
+                "condition": "50%CO2，1.4mol/L，313K",
+                "reac_heat": 74.41,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 2
+            }
+        ],
+        "item_id": 45
+    },
+    {
+        "category": "多胺",
+        "name": "四乙烯五胺",
+        "cas": "112-57-2",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "50%CO2，1mol/L，313K",
+                "reac_heat": 82.95,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 46
+    },
+    {
+        "category": "多胺",
+        "name": "己二胺",
+        "cas": "124-09-4",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "50%CO2，2mol/L，313K",
+                "reac_heat": 92.22,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 47
+    },
+    {
+        "category": "多胺",
+        "name": "羟乙基乙二胺",
+        "cas": "111-41-1",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "50%CO2，2mol/L，313K",
+                "reac_heat": 87.62,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 48
+    },
+    {
         "category": "氨基酸盐",
         "name": "L-脯氨酸钾",
         "cas": "",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 80.82,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 80.82,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 49
     },
     {
-        "index": 60,
-        "combined_index": "氨基酸盐 | β-丙氨酸钾 | N/A | N/A",
-        "category": "氨基酸盐",
-        "name": "β-丙氨酸钾",
-        "cas": "",
-        "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 83.08,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 61,
-        "combined_index": "氨基酸盐 | 牛磺酸钾 | N/A | N/A",
-        "category": "氨基酸盐",
-        "name": "牛磺酸钾",
-        "cas": "",
-        "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 85.46,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
-    },
-    {
-        "index": 62,
-        "combined_index": "氨基酸盐 | L-苏氨酸钾 | N/A | N/A",
         "category": "氨基酸盐",
         "name": "L-苏氨酸钾",
         "cas": "",
         "abbr": "",
-        "conditions": "100%CO2，2mol/L，313K",
-        "reac_heat": 80.94,
-        "eq_solubility": "",
-        "peak_time": "",
-        "data_source": ""
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 80.94,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 50
+    },
+    {
+        "category": "氨基酸盐",
+        "name": "β-丙氨酸钾",
+        "cas": "",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 83.08,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 51
+    },
+    {
+        "category": "氨基酸盐",
+        "name": "牛磺酸钾",
+        "cas": "",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 85.46,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 52
+    },
+    {
+        "category": "氨基酸盐",
+        "name": "甘氨酸钾",
+        "cas": "",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 85.05,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 53
+    },
+    {
+        "category": "氨基酸盐",
+        "name": "肌氨酸钾",
+        "cas": "",
+        "abbr": "",
+        "conditions_details": [
+            {
+                "condition": "100%CO2，2mol/L，313K",
+                "reac_heat": 75.79,
+                "eq_solubility": null,
+                "peak_time": null,
+                "data_source": null,
+                "condition_id": 1
+            }
+        ],
+        "item_id": 54
     }
 ]
