@@ -13,10 +13,10 @@ export default function HomeClient() {
     let jumpTimeout: NodeJS.Timeout | null = null;
     const checkSSHAndRedirect = () => {
       if (jumpTimeout) return;
-      if (isSSHConnected()) {
+      if (isSSHConnected() || window.location.pathname.includes('AminoDB')) {
         MyAlert("已连接到服务器，正在跳转...", 1500);
         jumpTimeout = setTimeout(() => {
-          if (isSSHConnected()) {
+          if (isSSHConnected() || window.location.pathname.includes('AminoDB')) {
             try {
               router.push('/dashboard');
             } catch (err) {
